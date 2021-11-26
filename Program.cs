@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace abacus
+{
+    class Program
+    {
+        static void Main (string[] args)
+        {
+            Console.WriteLine("Input");
+            string text = Console.ReadLine();
+
+            UserInput test = new UserInput(text);
+        }
+    }
+}
