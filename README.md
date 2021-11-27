@@ -1,2 +1,3 @@
 # abacus
-A console calculator. Performing the most simple mathematical operations: addition, subtraction, multiplication, division. 
+The infamous programming challenge for beginners a Calculator. 
+This is my version... It performs the basic mathematical operations: addition, subtraction, multiplication, division. 
