@@ -22,7 +22,11 @@ namespace abacus
                 switch (symbol)
                 {
                     case '+':
-                    Addition(operands);
+                    Add(operands);
+                    break;
+
+                    case '-':
+                    Subtract(operands);
                     break;
 
                     default:
@@ -32,8 +36,8 @@ namespace abacus
             }
         }
 
-        // Addition
-        private void Addition (List<double> operands)
+        // Add
+        private void Add (List<double> operands)
         {
             if (operands.Count > 1)
             {
@@ -50,10 +54,58 @@ namespace abacus
             }
         }
 
-        // Subtraction
+        // Subtract
+        private void Subtract (List<double> operands)
+        {
+            if (operands.Count > 1)
+            {
+                this.finalCalc = operands.ElementAt(0) - operands.ElementAt(1);
+                operands.RemoveRange(0, 2);
+
+                if (operands.Count == 0)
+                    Console.WriteLine(finalCalc);
+
+            }else
+            {
+                this.finalCalc -= operands.ElementAt(0);
+                Console.WriteLine(finalCalc);
+            }
+        }
 
         // Divide
+        private void Divide (List<double> operands)
+        {
+            if (operands.Count > 1)
+            {
+                this.finalCalc = operands.ElementAt(0) / operands.ElementAt(1);
+                operands.RemoveRange(0, 2);
+
+                if (operands.Count == 0)
+                    Console.WriteLine(finalCalc);
+
+            }else
+            {
+                this.finalCalc /= operands.ElementAt(0);
+                Console.WriteLine(finalCalc);
+            }
+        }
 
         // Multiply
+        private void Multiply (List<double> operands)
+        {
+            if (operands.Count > 1)
+            {
+                this.finalCalc = operands.ElementAt(0) * operands.ElementAt(1);
+                operands.RemoveRange(0, 2);
+
+                if (operands.Count == 0)
+                    Console.WriteLine(finalCalc);
+
+            }else
+            {
+                this.finalCalc *= operands.ElementAt(0);
+                Console.WriteLine(finalCalc);
+            }
+        }
     }
 }
