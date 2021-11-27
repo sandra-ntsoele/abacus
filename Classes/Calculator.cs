@@ -39,11 +39,15 @@ namespace abacus
             {
                 this.finalCalc = operands.ElementAt(0) + operands.ElementAt(1);
                 operands.RemoveRange(0, 2);
+
+                if (operands.Count == 0)
+                    Console.WriteLine(finalCalc);
+
             }else
             {
                 this.finalCalc += operands.ElementAt(0);
+                Console.WriteLine(finalCalc);
             }
-            Console.WriteLine(finalCalc);
         }
 
         // Subtraction
