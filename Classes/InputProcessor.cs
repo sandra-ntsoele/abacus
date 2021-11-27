@@ -1,23 +1,22 @@
 namespace abacus
 {
-    class UserInput
+    class InputProcessor 
     {
         /* 
          * Class properties
          */
         private string input;
-        private List<char> userMathSymbols = new List<char>();
-        private List<double> operands = new List<double>();
         private char[] defaultMathSymbols = {'/', '*', '-', '+'};
+
+        public List<char> userMathSymbols = new List<char>();
+        public List<double> operands = new List<double>();
 
         /* 
          * Class constructor
          */
-        public UserInput(string userInput)
+        public InputProcessor(string userInput)
         {
-            this.input = userInput;
-
-            processInput(this.input);
+            processInput(userInput);
         }
 
         /* 

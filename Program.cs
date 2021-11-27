@@ -7,7 +7,7 @@
             Console.WriteLine("Input");
             string text = Console.ReadLine();
 
-            UserInput test = new UserInput(text);
+            Calculator calculator = new Calculator(text);
         }
     }
 }
