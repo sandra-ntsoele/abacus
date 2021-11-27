@@ -21,6 +21,14 @@ namespace abacus
             {
                 switch (symbol)
                 {
+                    case '/':
+                    Subtract(operands);
+                    break;
+
+                    case '*':
+                    Subtract(operands);
+                    break;
+                    
                     case '+':
                     Add(operands);
                     break;
